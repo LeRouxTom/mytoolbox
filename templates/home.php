@@ -51,21 +51,18 @@ if (!empty($_POST)) {
         $messages = $result;
     } else {
         if(insert('admin_messages', $result)) {
-            
-            $dest="lerouxtom15@gmail.com";
-            $objet="lerouxtom15@gmail.com";
+
+            $messages['success'][] = 'Message envoyé !';
+
             $message="
                Bonjour
                Nous avons bien reçu votre mail.
                Bonne continuation sur notre site.
             ";
-            $entetes="From: lerouxtom15@gmail.com";
-            $entetes.="Cc: tomkelig@gmail.com";
-            $entetes.="Content-Type: text/html; charset=iso-8859-1";
-            
-            mail($dest,$objet,$message,$entetes); 
 
-            $messages['success'][] = 'Message envoyé !';
+            
+            mail((htmlspecialchars($_POST['email'],ENT_QUOTES)),'Confirmation de reception du formulaire', $message);
+
         }
     }
 }

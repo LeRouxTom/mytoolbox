@@ -31,7 +31,7 @@ template('header', array(
                             <label for="of" aria-hidden="true" hidden>Nombre</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text">de</div>
+                                    <div class="input-group-text">vers</div>
                                 </div>
                                 <input id="of" name="of" type="text" class="form-control" required>
                             </div>

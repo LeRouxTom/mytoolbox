@@ -10,7 +10,7 @@ RewriteRule . /index.php [L]
 
 AuthName "Merci de vous connecter"
 AuthType Basic
-AuthUserFile "moncheminici/php-toolbox/.htpasswd"
+AuthUserFile "C:\wamp64\www\mytoolbox\.htpasswd"
 
 # first, allow everybody
 Order Allow,Deny
